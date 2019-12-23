@@ -8,7 +8,9 @@ All functions are available by starting to type 'function' in the editor.
 1.) (If you already have a snippets file skip this step.) Create a new snippet file by navigating to File > Preferences > User Snippets > New Global Snippets File 
 
 # Shorthand Codes
-!header -   Generate FHL Script header
+type !header to Generate the FHL Script header.
+
+Each shorthand code is idenfitied with a '.' prior to the command.
 
 **User Event**
 
