@@ -1,0 +1,1105 @@
+/********************************************************************************************************************************
+ * Copyright © FHL.
+ * All Rights Reserved.
+ * This is the confidential and proprietary information of FHL.
+ * The misuse of is strictly prohibited, in accordance with the terms of your agreement with FHL.
+ * 
+ * Name:			FHL Snippets
+ * 
+ * Script Type:		N/A
+ * 
+ * API Version: 	N/A
+ *
+ * Version:			1.0.0 - Initial Version - 13/12/2019 - JAH
+ * 
+ * Author:			FHL
+ * 
+ * Purpose:			Provide useful snippets for vs code.
+ * 
+ * Script: 			N/A
+ * Deploy: 			N/A
+ * 
+ * Notes:	        List of commands:
+					- !header - Generate FHL Standard script header.
+					- !func - Generate a skeleton function with 1 parameter.
+					- !try - Generate a try/catch block with 'errorHandler'.
+					- !eh - Generate the errorHandler line.
+					- !lookup2 - Generate SuiteScript 2.0 LookupFields function.
+ * 
+ * Library: 		
+ ********************************************************************************************************************************/
+
+ {
+	/***********************************************
+	Snippet Admin
+	***********************************************/
+
+	//Allows the user to type !help to receieve a link to the documentation.
+	"Snippet Help": {
+        "prefix": "!help",
+        "body": [
+            "https://github.com/jhumphreysFHL/vscode-snippets/blob/master/README.md"
+        ],
+        "description": "Snippet Help"
+	},
+	
+	/***********************************************
+	FHL General
+	***********************************************/
+
+	//Standard Script Header
+	"FHL Script Header": {
+        "prefix": "!header",
+        "body": [
+            "/********************************************************************************************************************************",
+            " * Copyright © FHL.",
+            " * All Rights Reserved.",
+            " * This is the confidential and proprietary information of FHL.",
+            " * The misuse of is strictly prohibited, in accordance with the terms of your agreement with FHL.",
+            " * ",
+            " * Name:\t\t\t",
+            " * ",
+            " * Script Type:\t\t",
+            " * ",
+            " * API Version: \t",
+            " *",
+            " * Version:\t\t\t1.0.0 - ",
+            " * ",
+            " * Author:\t\t\tFHL",
+            " * ",
+            " * Purpose:\t\t\t",
+            " * ",
+            " * Script: \t\t\tcustomscript_",
+            " * Deploy: \t\t\tcustomdeploy_",
+            " * ",
+            " * Notes:\t        ",
+            " * ",
+            " * Library: \t\t",
+            " ********************************************************************************************************************************/"
+        ],
+        "description": "FHL Script Header"
+	},
+
+	//FHL Try/Catch Block
+	"FHL Try/Catch": {
+		"prefix": "trycatch",
+		"body": [
+			"try",
+			"{",
+			"",
+			"}",
+			"catch(e)",
+			"{",
+			"\terrorHandler('', e);",
+			"}"
+		],
+		"description": "FHL Try/Catch"
+	},
+	
+	/***********************************************
+	SuiteScript 1.0 Functions
+	***********************************************/
+
+	//USER EVENT
+    "SuiteScript 1.0 : User Event : beforeLoad": {
+        "prefix": ["function",".uebl"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction beforeLoad(type, form, request)",
+            "    {",
+            "        try",
+            "        {",
+            "            //do something",
+            "        }",
+            "        catch(error)",
+            "        {",
+            "            Library.errorHandler('beforeLoad', error);",
+            "        }",
+            "    }"
+        ],
+        "description": "SuiteScript 1.0 : User Event : beforeLoad"
+	},
+	
+    "SuiteScript 1.0 : User Event : beforeSubmit": {
+        "prefix": ["function",".uebs"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction beforeSubmit(type)",
+            "    {",
+            "        try",
+            "        {",
+            "            //do something",
+            "        } ",
+            "        catch(error)",
+            "        {",
+            "            Library.errorHandler('beforeSubmit', error);",
+            "        }",
+            "    }"
+        ],
+        "description": "SuiteScript 1.0 : User Event : beforeSubmit"
+	},
+	
+    "SuiteScript 1.0 : User Event : afterSubmit": {
+        "prefix": ["function",".ueas"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction afterSubmit(type)",
+            "    {",
+            "        try",
+            "        {",
+            "            //do something ",
+            "        }",
+            "        catch(error)",
+            "        {",
+            "            Library.errorHandler('afterSubmit', error);",
+            "        }",
+            "    }"
+        ],
+        "description": "SuiteScript 1.0 : User Event : afterSubmit"
+	},
+	
+    "SuiteScript 1.0 : Client Script : pageInit": {
+        "prefix": ["function",".cspi"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction pageInit(type)",
+            "    {",
+            "        try",
+            "        {",
+            "            //do something",
+            "        }",
+            "        catch(error)",
+            "        {",
+            "            Library.errorHandler('pageInit', error);",
+            "        }",
+            "    }"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : pageInit"
+	},
+	
+    "SuiteScript 1.0 : Client Script : saveRecord": {
+        "prefix": ["function",".cssr"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction saveRecord()",
+            "    {",
+            "        var saveOk = false",
+            "",
+            "        try",
+            "        {",
+            "            //do something",
+            "            //saveOk true/false",
+            "        }",
+            "        catch(error)",
+            "        {",
+            "            Library.errorHandler('saveRecord', error);",
+            "        }",
+            "",
+            "        return saveOk;",
+            "    }"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : saveRecord"
+	},
+	
+    "SuiteScript 1.0 : Client Script : validateField": {
+        "prefix": ["function",".csvf"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction validateField(type, name, linenum)",
+            "\t{",
+            "\t\tvar fieldValid = false",
+            "\t\ttry",
+            "\t\t{",
+            "\t\t\t //do something",
+            "\t\t}",
+            "\t\tcatch(error)",
+            "\t\t{",
+            "\t\t\tLibrary.errorHandler('validateField', error);",
+            "\t\t}",
+            " ",
+            "\t\treturn fieldValid;",
+            "\t}"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : validateField"
+	},
+	
+    "SuiteScript 1.0 : Client Script : fieldChanged": {
+        "prefix": ["function",".csfc"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction fieldChanged(type, name, linenum)",
+            "\t{",
+            "\t\t try",
+            "\t\t {",
+            "\t\t\t //do something",
+            "\t\t }",
+            "\t\t catch(error)",
+            "\t\t {",
+            "\t\t\t Library.errorHandler('fieldChanged', error);",
+            "\t\t }",
+            "\t}",
+            ""
+        ],
+        "description": "SuiteScript 1.0 : Client Script : fieldChanged"
+	},
+	
+    "SuiteScript 1.0 : Client Script : postSourcing": {
+        "prefix": ["function",".csps"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction postSourcing(type, name)",
+            "\t{",
+            "\t\ttry",
+            "\t\t{",
+            "\t\t\t //do something",
+            "\t\t}",
+            "\t\tcatch(error)",
+            "\t\t{",
+            "\t\t\t Library.errorHandler('postSourcing', error);",
+            "\t\t}",
+            "\t}"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : postSourcing"
+	},
+
+    "SuiteScript 1.0 : Client Script : lineInit": {
+        "prefix": ["function",".csli"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction lineInit(type)",
+            "\t{",
+            "\t\ttry",
+            "\t\t{",
+            "\t\t\t //do something",
+            "\t\t}",
+            "\t\tcatch(error)",
+            "\t\t{",
+            "\t\t\t Library.errorHandler('lineInit', error);",
+            "\t\t}",
+            "\t}"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : lineInit"
+	},
+	
+    "SuiteScript 1.0 : Client Script : validateLine": {
+        "prefix": ["function",".csvl"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction validateLine(type)",
+            "\t{",
+            "\t\tvar lineOk = false",
+            "\t\ttry",
+            "\t\t{",
+            "\t\t\t //do something",
+            "\t\t}",
+            "\t\tcatch(error)",
+            "\t\t{",
+            "\t\t\tLibrary.errorHandler('validateLine', error);",
+            "\t\t}",
+            "\t\treturn lineOk;",
+            "\t}"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : validateLine"
+	},
+
+    "SuiteScript 1.0 : Client Script : recalc": {
+        "prefix": ["function",".csr"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction recalc(type)",
+            "\t{",
+            "\t\ttry",
+            "\t\t{",
+            " ",
+            "\t\t}",
+            "\t\tcatch(error)",
+            "\t\t{",
+            "\t\t\tLibrary.errorHandler('recalc', error);",
+            "\t\t}",
+            "\t}"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : recalc"
+	},
+
+    "SuiteScript 1.0 : Client Script : validateInsert": {
+        "prefix": ["function",".csvi"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction validateInsert(type)",
+            "\t{",
+            "\t\tvar insertOk = false;",
+            "\t\t try",
+            "\t\t {",
+            "\t\t\t //do something",
+            "\t\t }",
+            "\t\t catch(error)",
+            "\t\t {",
+            "\t\t\t Library.errorHandler('validateInsert', error);",
+            "\t\t }",
+            "\t\t return insertOk;",
+            "\t}"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : validateInsert"
+	},
+
+    "SuiteScript 1.0 : Client Script : validateDelete": {
+        "prefix": ["function",".csvd"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction validateDelete(type)",
+            "\t{",
+            "\t\tvar deleteOk = false;",
+            "\t\ttry",
+            "\t\t{",
+            "\t\t\t //do something",
+            "\t\t}",
+            "\t\tcatch(error)",
+            "\t\t{",
+            "\t\t\tLibrary.errorHandler('validateDelete', error);",
+            "\t\t}",
+            "\t\treturn deleteOk;",
+            "\t}"
+        ],
+        "description": "SuiteScript 1.0 : Client Script : validateDelete"
+	},
+	
+    "SuiteScript 1.0 : Scheduled Script : execute": {
+        "prefix": ["function",".sse"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction execute()",
+            "    {",
+            "        try",
+            "        {",
+            "            //do something",
+            "        }",
+            "        catch(error)",
+            "        {",
+            "            Library.errorHandler('execute', error);",
+            "        }",
+            "    };"
+        ],
+        "description": "SuiteScript 1.0 : Scheduled Script : execute"
+	},
+	
+    "SuiteScript 1.0 : Suitelet : onRequest": {
+        "prefix": ["function",".sor"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "\tfunction onRequest(request, response)",
+            "    {",
+            "        try",
+            "        {",
+            "            if (request.getMethod() == 'GET') ",
+            "            {",
+            "                //do something",
+            "            }",
+            "            else if (request.getMethod() == 'POST') ",
+            "            {",
+            "                //do something else",
+            "            }",
+            "        }",
+            "        catch(error)",
+            "        {",
+            "            Library.errorHandler('onRequest', error)",
+            "        }",
+            "    }",
+            "",
+            "    return{",
+            "        onRequest:onRequest",
+            "    }"
+        ],
+        "description": "SuiteScript 1.0 : Suitelet : onRequest"
+    },
+	
+
+
+
+	
+	/***********************************************
+	SuiteScript 2.0 Functions
+	***********************************************/
+
+	//USER EVENT
+
+	"SuiteScript 2.0 : User Event : AfterSubmit": {
+        "prefix": ["function", ".ueas2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function afterSubmit(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('afterSubmit', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 - UE: AfterSubmit"
+    },
+
+
+    "SuiteScript 2.0 : User Event : beforeLoad": {
+		"prefix": ["function",".uebl2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function beforeLoad(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('beforeLoad', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 - UE: beforeLoad"
+    },
+
+    "SuiteScript 2.0 : User Event : beforeSubmit": {
+		"prefix": ["function",".eubs2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function beforeSubmit(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('beforeSubmit', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0- UE: beforeSubmit"
+	},
+
+	//SCHEDULED SCRIPT
+
+	"SuiteScript 2.0 : Scheduled Script : Execute": {
+        "prefix": ["function",".sse2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function execute(context)",
+            "{",
+            "    try",
+            "    {",
+            "       //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('execute', error);",
+            "    }",
+            "};"
+        ],
+        "description": "SuiteScript 2.0 - Scheduled: Execution Function"
+	},
+
+	//CLIENT SCRIPT
+	
+	"SuiteScript 2.0 : Client Script : pageInit": {
+        "prefix": ["function",".cspi2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function pageInit(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('pageInit', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 - CS: pageInit"
+	},
+	
+	"SuiteScript 2.0 : Client Script : saveRecord": {
+        "prefix": ["function",".cssr2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function saveRecord()",
+            "{",
+            "    var saveOk = false",
+            "    try",
+            "    {",
+            "        //do something",
+            "        //saveOk true/false",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('saveRecord', error);",
+            "    }",
+            "    return saveOk;",
+            "}",
+            ""
+        ],
+        "description": "SuiteScript 2.0 - CS: saveRecord"
+    },
+
+    "SuiteScript 2.0 : Client Script : validatefield": {
+        "prefix": ["function",".csvf2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function validateField(context)",
+            "{",
+            "    var fieldValid = false",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('validateField', error);",
+            "    }",
+            "    return fieldValid;",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 - CS: validatefield"
+    },
+
+    "SuiteScript 2.0 : Client Script : fieldChanged": {
+        "prefix": ["function",".csfc2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function fieldChanged(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('fieldChanged', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 - CS: fieldChanged"
+    },
+
+    "SuiteScript 2.0 : Client Script : postSourcing": {
+        "prefix": ["function",".csps2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function postSourcing(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('postSourcing', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 - CS: postSourcing"
+    },
+
+    "SuiteScript 2.0 : Client Script : lineInit": {
+        "prefix": ["function",".csli2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function lineInit(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('lineInit', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 : Client Script : lineInit"
+	},
+	
+	//USER EVENT
+
+    "SuiteScript 2.0 : Client Script : validateLine": {
+        "prefix": ["function",".csvl2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function validateLine(context)",
+            "{",
+            "    var lineOk = false",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('validateLine', error);",
+            "    }",
+            "    return lineOk;",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 : User Event : validateLine"
+    },
+
+    "SuiteScript 2.0 : Client Script : recalc": {
+        "prefix": ["function",".csr2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function recalc(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('recalc', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 : User Event : recalc"
+    },
+
+    "SuiteScript 2.0 : Client Script : validateInsert": {
+        "prefix": ["function",".csvi2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function validateInsert(context)",
+            "{",
+            "    var insertOk = false;",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('validateInsert', error);",
+            "    }",
+            "    return insertOk;",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 : User Event : validateInsert"
+    },
+
+    "SuiteScript 2.0 : Client Script : validateDelete": {
+        "prefix": ["function",".csvd2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function validateDelete(context)",
+            "{",
+            "    var deleteOk = false;",
+            "    try",
+            "    {",
+            "        //do something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('validateDelete', error);",
+            "    }",
+            "    return deleteOk;",
+            "}",
+            ""
+        ],
+        "description": "SuiteScript 2.0 : User Event : validateDelete"
+	},
+	
+	//MAP REDUCE
+
+	"SuiteScript 2.0 : Map/Reduce : getInputData": {
+        "prefix": ["function",".mrgid"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function getInputData(context)",
+            "{",
+            "    var returnObj;",
+            "    try",
+            "    {",
+            "        //get something",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('getInputData', error);",
+            "    }",
+            "",
+            "    return returnObj;",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 : Map/Reduce : getInputData"
+    },
+
+    "SuiteScript 2.0 : Map/Reduce : map": {
+        "prefix": ["function",".mrm"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function map(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //map values",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('map', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 : Map/Reduce : map"
+    },
+
+    "SuiteScript 2.0 : Map/Reduce: reduce": {
+        "prefix": ["function",".mrr"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function reduce(context)",
+            "{",
+            "    try",
+            "    {",
+            "        //reduce mapped values",
+            "    }",
+            "    catch(error)",
+            "    {",
+            "        Library.errorHandler('reduce', error);",
+            "    }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 : Map/Reduce: reduce"
+	},
+
+	//SUITELET
+
+	"SuiteScript 2.0 : Suitelet : onRequest": {
+        "prefix": ["function",".sor2"],
+        "body": [
+			"    /**",
+            "     * FUNCTION DESCRIPTION - Delete '@s' as applicable.",
+            "     * ",
+            "     * @public ",
+            "     * @private",
+            "     * @since ",
+            "     * @param {*} TODO ",
+            "     * @return {*} TODO ",
+            "     * @memberof TODO",
+            "     */",
+            "function onRequest(params)",
+            "{",
+            "",
+            "     var request = {};",
+            "     var response = {};",
+            "",
+            "     try",
+            "     {",
+            "         request = params.request;",
+            "         response = params.response;",
+            "",
+            "         if(request.method === 'GET')",
+            "         {",
+            "            //do something",
+            "         }",
+            "         else if(request.method === 'POST')",
+            "         {",
+            "             //do something else",
+            "         }",
+            "     }",
+            "     catch(error)",
+            "     {",
+            "         Library.errorHandler('onRequest', error);",
+            "     }",
+            "}"
+        ],
+        "description": "SuiteScript 2.0 : Suitelet : onRequest"
+    },
+
+}
