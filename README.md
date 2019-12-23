@@ -5,7 +5,8 @@ Visual Studio Code FHL Snippets is a visual studio snippets file containing shor
 All functions are available by starting to type 'function' in the editor.
 
 #Installation
-1.) (If you already have a snippets file skip this step.) Create a new snippet file by navigating to File > Preferences > User Snippets > New Global Snippets File 
+1. (If you already have a snippets file skip this step.) Create a new snippet file by navigating to File > Preferences > User Snippets > New Global Snippets File
+2. Copy the contents of the FHL Snippets file into your global snippets file.
 
 # Shorthand Codes
 type !header to Generate the FHL Script header.
