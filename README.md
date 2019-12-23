@@ -1,4 +1,6 @@
-# vscode-snippets help
+![picture alt](https://www.liv-ex.com/wp-content/uploads/2019/02/FHL-Logo-Colour.png "FHL")
+
+# About
 Visual Studio Code FHL Snippets is a visual studio snippets file containing shorthand codes for quicker entry of frequently used code fragments.
 All functions are available by starting to type 'function' in the editor.
 
@@ -8,63 +10,53 @@ All functions are available by starting to type 'function' in the editor.
 # Shorthand Codes
 !header -   Generate FHL Script header
 
-User Event (SuiteScript 1.0):
+**User Event**
 
-.uebl   -   beforeLoad
-.uebs   -   beforeSubmit
-.ueas   -   afterSubmit
+| Function     | 1.0   | 2.0    |
+|--------------|-------|--------|
+| beforeLoad   | .uebl | .uebl2 |
+| beforeSubmit | .uebs | .uebs2 |
+| afterSubmit  | .ueas | .ueas2 |
 
-Client Script (SuiteScript 1.0):
+**Client Script**
 
-.cspi   -   pageInit
-.cssr   -   saveRecord
-.csvf   -   validateField
-.csfc   -   fieldChanged
-.csps   -   postSourcing 
-.csli   -   lineInit
-.csvl   -   validateLine
-.csr    -   Recalc
-.csvi   -   validateInsert
-.csvd   -   validateDelete
+| Function       | 1.0   | 2.0    |
+|----------------|-------|--------|
+| pageInit       | .cspi | .cspi2 |
+| saveRecord     | .cssr | .cssr2 |
+| validateField  | .csfv | .csfv2 |
+| fieldChanged   | .csfc | .csfc2 |
+| postSourcing   | .csps | .csps2 |
+| lineInit       | .csli | .csli2 |
+| validateLine   | .csvl | .csvl2 |
+| recalc         | .csr  | .csr2  |
+| validateInsert | .csvi | .csvi2 |
+| validateDelete | .csvd | .csvd2 |
 
-Scheduled Script (SuiteScript 1.0):
 
-.sse    -   execute
 
-Suitelet (SuiteScript 1.0):
 
-.sor    -   onRequest
+**Scheduled Script**
 
-User Event (SuiteScript 2.0):
+| Function | 1.0  | 2.0   |
+|----------|------|-------|
+| execute  | .sse | .sse2 |
 
-.ueas2  -   afterSubmit
-.uebl2  -   beforeLoad
-.uebs2  -   beforeSubmit
+**Suitelet**
 
-Client Scipt (SuiteScript 2.0):
-.cspi2  -   pageInit
-.cssr2  -   saveRecord
-.csvf2  -   validateField
-.csfc2  -   fieldChanged
-.csps2  -   postSourcing
-.csli2  -   lineInit
-.csvl2  -   validateLine
-.csr2   -   recalc
-.csvi2  -   validateInsert
-.csvd2  -   validateDelete
+| Function  | 1.0  | 2.0   |
+|-----------|------|-------|
+| onRequest | .sor | .sor2 |
 
-Map/Reduce (SuiteScript 2.0):
+**Map/Reduce**
 
-.mrgid  -   getInputData
-.mrm    -   map
-.mrr    -   reduce
+| Function     | 1.0 | 2.0    |
+|--------------|-----|--------|
+| getInputData | N/A | .mrgid |
+| map          | N/A | .mrm   |
+| reduce       | N/A | .mrr   |
 
-Suitelet (SuiteScript 2.0):
-.sor2   -   onRequest
 
-Scheduled Script (SuiteScript 2.0):
-
-.sse2   -   execute
 
 
 
